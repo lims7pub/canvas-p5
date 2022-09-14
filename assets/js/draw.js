@@ -22,7 +22,7 @@ let deltaX = 0.0, deltaY = 0.0;
 let springing = 0.0009, damping = 0.98;
 
 //corner nodes
-let nodes = 5;
+let nodes = 108;
 
 //zero fill arrays
 let nodeStartX = [];
