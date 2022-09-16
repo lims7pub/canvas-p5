@@ -69,11 +69,14 @@ em {
 body {
 	font-family: 'Roboto', sans-serif;
 	text-align: center;
+	background-color: #eee;
+}
+.of-hidden {
 	overflow: hidden;
 }
 h1 {
-	margin: 1em 0 .5em;
-	font-size: 3em;
+	margin: 1em 0 .3em;
+	font-size: 3.6em;
 	font-weight: 700;
 }
 canvas {
@@ -92,26 +95,25 @@ canvas {
 
 }
 .card-item {
+	position: relative;
 	display: block;
 	width: calc(25% - 2em);
 	margin: 1em;
 	padding: 1.5em;
     border: 1px solid #f0f0f0;
     border-radius: .5em;
-    box-shadow: .25em .6em .6em rgba(0, 0, 0, .1); 
-}
-.card-item {
-	display: block;
-	width: calc(25% - 2em);
-	margin: 1em;
-	padding: 2em;
-    border: 1px solid #f0f0f0;
-    border-radius: .5em;
+	background-color: #fff;
     box-shadow: .25em .6em .6em rgba(0, 0, 0, .1);
+	transform: rotate3d(1, 1, 1, -2deg);
+	transition: all .3s ease;
+}
+.card-item:hover {
+	transform: rotate3d(1, 1, 1, 14deg) scale(1.2);
+	z-index: 2;
 }
 .card-item .tit {
 	margin-bottom: .6em;
-	font-size: 1.6em;
+	font-size: 1.8em;
 	font-weight: 700;
 }
 .card-item .txt {
