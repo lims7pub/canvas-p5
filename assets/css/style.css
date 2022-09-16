@@ -1,12 +1,119 @@
-* {
-    margin: 0;
-    padding: 0;
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+
+/* ================================== Reset ================================== */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video, main {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+	box-sizing: border-box;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
 }
 body {
-    overflow: hidden;
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+button {
+	padding: 0;
+	border: 0;
+	cursor: pointer;
+}
+img {
+	max-width: 100%;
+}
+a {
+	color: inherit;
+	text-decoration: none;
+}
+address,
+em {
+	font-style: normal;
+}
+
+/* ================================== Base ================================== */
+
+body {
+	font-family: 'Roboto', sans-serif;
+	text-align: center;
+	overflow: hidden;
+}
+h1 {
+	margin: 1em 0 .5em;
+	font-size: 3em;
+	font-weight: 700;
 }
 canvas {
-    width: 100% !important;
-    height: 100vh !important;
+    position: absolute;
+    top: 50%;
+    lefT: 50%;
+    transform: translate(-50%, -50%);
     object-fit: cover;
+}
+.card-list {
+    display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	margin-top: 1em;
+	padding: 1em;
+
+}
+.card-item {
+	display: block;
+	width: calc(25% - 2em);
+	margin: 1em;
+	padding: 1.5em;
+    border: 1px solid #f0f0f0;
+    border-radius: .5em;
+    box-shadow: .25em .6em .6em rgba(0, 0, 0, .1); 
+}
+.card-item {
+	display: block;
+	width: calc(25% - 2em);
+	margin: 1em;
+	padding: 2em;
+    border: 1px solid #f0f0f0;
+    border-radius: .5em;
+    box-shadow: .25em .6em .6em rgba(0, 0, 0, .1);
+}
+.card-item .tit {
+	margin-bottom: .6em;
+	font-size: 1.6em;
+	font-weight: 700;
+}
+.card-item .txt {
+	color: #777;
 }
